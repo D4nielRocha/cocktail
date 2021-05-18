@@ -1,0 +1,270 @@
+
+  ::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    box-sizing: border-box;
+    background: rgb(255, 255, 255) !important;
+}
+main{
+    min-height: 90vh;
+    text-align: center;
+}
+
+main h1{
+    color: rgb(156, 12, 12);
+    margin-top: 1rem;
+}
+.navbar-nav{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    margin-right: 5rem;
+}
+
+footer{
+    color: antiquewhite;
+    text-align: center;
+}
+
+form{
+    width: 30%;
+    margin: auto;
+    color: #242424;
+}
+
+
+.error{
+    color: red;
+}
+
+.check{
+    color: green;
+}
+
+.row{
+    height: 100vh;
+
+}
+
+
+.display .card{
+    text-align: center;
+    background: #242424;
+    border: none;
+    border-radius: 25px;
+    margin-top: 3rem;
+
+}
+
+.card-title{
+    font-size: 2rem;
+    color: rgb(156, 12, 12);
+}
+
+.display .card .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.display .card .card-body i{
+    /* margin-right: 1rem; */
+    font-size: 3rem;
+    transform: translatey(-175%);
+    z-index: 1;
+    position: absolute;
+    left: 0;
+}
+
+
+.ingredients{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    color: antiquewhite;
+}
+
+.ingredients p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.ingredients li{
+
+    font-size: 1rem;
+    text-align: left;
+}
+
+
+.details{
+    position: relative;
+}
+
+
+.card{
+    width: 50%;
+    margin: auto;
+    height: 40vh;
+    border: none;
+
+}
+
+.details .card-body{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+
+.details .cocktail-details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 100%;
+
+}
+
+
+.image img{
+    margin-top: 2rem;
+    width: 250px;
+    height: 300px;
+}
+
+.buttons{
+    display: flex;
+    width: 100%;
+}
+
+.buttons a{
+    transform: translateX(-100%);
+}
+
+.buttons input{
+    transform: translateX(-100%);
+}
+
+.history{
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-25%);
+}
+
+.history h1{
+    margin-bottom: 3rem;
+}
+
+.history p{
+    text-decoration: solid;
+    text-align: justify;
+}
+
+#landing-header {
+    z-index: 1;
+    position: relative;
+    /* text-align: center; */
+    left: 2%;
+    top: 0;
+    padding-top: 40vh;
+}
+
+#landing-header h1{
+    font-size: 2.5rem;
+    color: rgb(156, 12, 12);
+}
+
+
+#blog-title{
+    z-index: 100;
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 30s linear infinite;
+}
+
+
+.slideshow li:nth-child(1) { 
+    background-image: url(https://i.pinimg.com/originals/b7/1f/54/b71f54689cfec13ddbbd0977d0dffe4f.jpg) 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(https://mixology.eu/wp-content/uploads/2017/11/Bijou-Cocktail-mixology-SSF.jpg);
+    animation-delay: 5s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(https://253qv1sx4ey389p9wtpp9sj0-wpengine.netdna-ssl.com/wp-content/uploads/2010/07/GettyImages-Daniel-Camer_Torch-Cocktail_1920x1280.jpg);
+    animation-delay: 10s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(https://www.itl.cat/pngfile/big/176-1767220_vodka-cocktail-wallpaper-.jpg);
+    animation-delay: 15s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(https://i.pinimg.com/originals/b7/ad/2b/b7ad2b288fb58a0bda1e6a28d610f951.jpg);
+    animation-delay: 20s; 
+  }
+
+
+  
+  @keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+    10% {
+        opacity: 1;
+        animation-timing-function: ease-in-out;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+}
+
+/* Older browsers support - .no-cssanimation class added by modernizr */
+.no-cssanimations .slidewshow li {
+    opacity: 1;
+}
